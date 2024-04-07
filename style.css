@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(to right bottom, #b7f1f5, #daeafb); */
+    background: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease-in-out; /* Dark mode transition */
+  }
+
+  .container {
+    background-color: #000000; /* White container background (default) */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow (default) */
+    max-width: 500px; /* Limit container width on larger screens */
+    width: 90%; /* Take up most of the space on smaller screens */
+    text-align: center; /* Center text for responsiveness */
+    position: relative; /* Required for GSAP animations */
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Dark mode transitions *
+  }
+
+  /* Dark mode styles */
+  .dark-mode {
+    background-color: #222; /* Dark background */
+    color: #ddd; /* Light text */
+  }
+
+  .dark-mode .container {
+    background-color: #333; /* Darker container background */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  }
+
+  h1 {
+    color: #3498db; /* Blue heading (default) */
+    font-size: 2em;
+    margin-bottom: 20px;
+    animation: titleAnim 2s ease-in-out infinite alternate; /* GSAP animation */
+  }
+
+  @keyframes titleAnim {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Password form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    color: inherit; /* Inherit color from container (default/dark mode) */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #b5cfcc;
+  }
+
+  input[type="password"] {
+    padding: 15px;
+    border: 1px solid #da2f68; /* Light gray border (default) */
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Light gray input background (default) */
+    font-size: 1em;
+    width: 100%; /* Stretch to full width */
+    animation: inputFocus 0.5s ease-in-out; /* GSAP animation on focus */
+    transition: border-color 0.2s ease-in-out; /* Border color transition */
+  }
+
+  @keyframes inputFocus {
+    from {
+      border-color: #ccc;
+    }
+    to {
+      border-color: #3498db; /* Blue border on focus (default) */
+    }
+  }
+
+  button[type="submit"] {
+    background-color: #3498db; /* Blue button color (default) */
+    color: #fff; /* White button text */
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    transition: background-color 0.2s ease-in-out; /* Background color transition */
+    animation: buttonHover 0.3s ease-in-out alternate; /* GSAP animation on hover */
+  }
+
+  @keyframes buttonHover {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05); /* Subtle zoom on hover */
+    }
+  }
+
+  button[type="submit"]:hover {
+    background-color: #222
+  }
+.status-message {
+  color: #fde281;
+}
