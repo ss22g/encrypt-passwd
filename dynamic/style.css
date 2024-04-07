@@ -1,0 +1,88 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    /* Global styles */
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection{
+  background-color: #092743;
+  color: white;
+}
+
+    body {
+        background: linear-gradient(to left bottom, #000000, #1f3e5c);
+    }
+
+    /* Container styles */
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Form styles */
+    form {
+        max-width: 500px;
+        width: 90%;
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      color: #092743;
+      font-size: 2em;
+      margin-bottom: 20px;
+      font-weight: 880;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 12px;
+        font-weight: bold;
+        color: #555;
+    }
+
+    input[type="password"],
+    input[type="file"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+    }
+
+    input[type="password"]:focus,
+    input[type="file"]:focus,
+    input[type="submit"]:focus {
+        border-color: #6e9eff;
+        outline: none;
+    }
+
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    @media screen and (max-width: 600px) {
+        form {
+            padding: 20px;
+        }
+    }
